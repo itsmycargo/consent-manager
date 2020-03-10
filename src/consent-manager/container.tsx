@@ -112,16 +112,16 @@ const Container: React.FC<ContainerProps> = props => {
     }
   })
 
-  const onClose = () => {
-    if (props.closeBehavior === undefined || props.closeBehavior === CloseBehavior.DISMISS) {
+  const onClose = behavior => {
+    if (behavior === undefined || behavior === CloseBehavior.DISMISS) {
       return toggleBanner(false)
     }
 
-    if (props.closeBehavior === CloseBehavior.ACCEPT) {
+    if (behavior === CloseBehavior.ACCEPT) {
       return props.saveConsent()
     }
 
-    if (props.closeBehavior === CloseBehavior.DENY) {
+    if (behavior === CloseBehavior.DENY) {
       const falsePreferences = Object.keys(props.preferences).reduce((acc, category) => {
         acc[category] = false
         return acc
@@ -130,12 +130,6 @@ const Container: React.FC<ContainerProps> = props => {
       props.setPreferences(falsePreferences)
       return props.saveConsent()
     }
-
-    // closeBehavior is a custom function
-    const customClosePreferences = props.closeBehavior(props.preferences)
-    props.setPreferences(customClosePreferences)
-    props.saveConsent()
-    return toggleBanner(false)
   }
 
   const handleCategoryChange = (category: string, value: boolean) => {

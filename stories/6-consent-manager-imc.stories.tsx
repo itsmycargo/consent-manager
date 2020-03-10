@@ -10,14 +10,23 @@ import { Preferences } from '../src/types'
 import CookieView from './components/CookieView'
 
 const bannerContent = (
-  <span>
-    We use cookies (and other similar technologies) to collect data to improve your experience on
-    our site. By using our website, you’re agreeing to the collection of data as described in our{' '}
-    <a href="https://www.itsmycargo.com/en/privacy" target="_blank">
-      Website Data Collection Policy
-    </a>
-    .
-  </span>
+  <div>
+    <div>
+      <strong>About Cookies On This Site</strong>
+    </div>
+    <br />
+    <div>
+      <span>
+        We use cookies (and other similar technologies) to collect data to improve your experience
+        on our site. By using our website, you’re agreeing to the collection of data as described in
+        our{' '}
+        <a href="https://www.itsmycargo.com/en/privacy" target="_blank">
+          Website Data Collection Policy
+        </a>
+        .
+      </span>
+    </div>
+  </div>
 )
 const bannerSubContent = 'Settings'
 const preferencesDialogTitle = 'Website Data Collection Preferences'
