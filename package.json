@@ -1,6 +1,6 @@
 {
   "name": "@itsmycargo/consent-manager",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "description": "Drop-in consent management plugin for analytics.js",
   "keywords": [
     "gdpr",

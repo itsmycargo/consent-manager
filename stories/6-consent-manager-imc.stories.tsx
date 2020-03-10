@@ -19,7 +19,7 @@ const bannerContent = (
     .
   </span>
 )
-const bannerSubContent = 'You can change your preferences at any time.'
+const bannerSubContent = 'Settings'
 const preferencesDialogTitle = 'Website Data Collection Preferences'
 const preferencesDialogContent =
   'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'

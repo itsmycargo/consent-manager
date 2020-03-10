@@ -12,6 +12,8 @@ const Root = styled<{ backgroundColor: string; textColor: string }, 'div'>('div'
   font-size: 14px;
   line-height: 1.3;
   overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
 `
 
 const Content = styled('div')`
@@ -44,6 +46,7 @@ const CloseButton = styled('button')`
   text-decoration: none;
   font-size: 16px;
   border-radius: 1px;
+  margin-left: 15px;
 `
 
 interface Props {
@@ -73,11 +76,11 @@ export default class Banner extends PureComponent<Props> {
     return (
       <Root innerRef={innerRef} backgroundColor={backgroundColor} textColor={textColor}>
         <Content>
-          <P>
-            {content} <a onClick={onChangePreferences}>{subContent}</a>
-          </P>
+          <P>{content}</P>
+
+          <a onClick={onChangePreferences}>{subContent}</a>
           <CloseButton type="button" title="Close" aria-label="Close" onClick={onClose}>
-            Accept
+            Agree
           </CloseButton>
         </Content>
       </Root>
