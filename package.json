@@ -8,6 +8,9 @@
     "analytics",
     "analytics.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "itsmycargo/consent-manager",
   "license": "MIT",
   "main": "commonjs/index.js",
